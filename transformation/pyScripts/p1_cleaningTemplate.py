@@ -1,17 +1,23 @@
 import pandas as pd
 import datetime as dt
-import uuid 
-import numpy as np
+import uuid ## creating unique identifiers
+import numpy as np ## good for missing values
 
 
 # load in messy data 
 df = pd.read_csv('transformation/dataFiles/raw/113243405_StonyBrookUniversityHospital_standardcharges.csv')
 
+<<<<<<< Updated upstream
 df
+=======
+df.sample(25) ##how many rows you would like to see
+
+>>>>>>> Stashed changes
 
 # get a count of the number of rows and columns
 countRows, countColumns = df.shape
 
+<<<<<<< Updated upstream
 # preview get random sample of 25 rows
 df.sample(25)
 
@@ -20,11 +26,27 @@ tenPercent = int(countRows * 0.1)
 
 sample_df_1 = df.sample(tenPercent)
 sample_df_2 = df.sample(int(countRows * 0.1))
+=======
+countRows
+
+countColumns
+
+##change countRows to full integer
+tenPercent = int(countRows * 0.1)
+
+tenPercent
+
+sample_df = df.sample(tenPercent)
+
+sample_df
+>>>>>>> Stashed changes
 
 
 ## clean the data
 # list columns
-list(df)
+column_names = list(df)
+
+column_names
 
 
 ############## COLUMN NAMES ##############
